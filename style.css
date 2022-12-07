@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #202d36;
+}
+html.light body {
+    background-color: rgb(249, 250, 242);
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.header {
+    background-color: #2b3743;
+    border-bottom: 1px solid #2b3743;
+}
+html.light .header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(235, 234, 234);
+}
+.header .container {
+    color: white;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+}
+html.light .header .container {
+    color: black;
+}
+.header .container a {
+    text-decoration: none;
+    color: white;
+} 
+html.light .header .container a {
+    color: rgb(0, 0, 0);
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.slider input {
+    padding: 10px 10px 10px 10px;
+    background-color: #2b3743;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 3px 9px 2px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    caret-color: white;
+    outline: none;
+}
+html.light .slider input {
+    background-color: white;
+    color: gray;
+}
+.slider input::placeholder {
+    text-align: center;
+}
+.slider select {
+    padding: 10px;
+    color: #a2abb4;
+    background-color: #2b3743;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 3px 9px 2px rgb(0 0 0 / 20%); 
+    cursor: pointer;
+}
+html.light .slider select {
+    background-color: white;
+    color: gray;
+}
+.main {
+    display: grid;
+    grid-gap: 2.75rem;
+    grid-template-columns: repeat(1, minmax(0 , 1fr));
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-top: 25px;
+}
+.box {
+    background-color: #2b3743;
+    border-radius: 10px;
+    box-shadow: 1px 3px 9px 2px rgb(0 0 0 / 20%);
+    word-break: break-all;
+}
+html.light .box {
+    background-color: white;
+}
+.box .img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.text {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #c0c9d2;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+html.light .text {
+    color: black;
+}
+html.light .text span {
+    color: #7a8188;
+}
+@media screen and (min-width: 320px) {
+    .main {
+        grid-template-columns: repeat(1 , minmax(0 , 1fr));
+    }
+    .slider input {
+        padding: 2px 5px 2px 2px;
+    }
+    .header .container {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 425px) {
+    .main {
+        grid-template-columns: repeat(2 , minmax(0 , 1fr));
+    }
+}
+@media screen and (min-width: 768px) {
+    .main {
+        grid-template-columns: repeat(3 , minmax(0 , 1fr));
+    }
+}
+@media screen and (min-width: 1024px) {
+    .main {
+        grid-template-columns: repeat(4 , minmax(0 , 1fr));
+    }
+}
